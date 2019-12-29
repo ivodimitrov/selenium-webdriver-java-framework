@@ -7,8 +7,6 @@ public class HomePage {
 
     private WebDriver driver;
 
-    // private By formAuthenticationLink = By.linkText("Form Authentication");
-
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
@@ -33,6 +31,15 @@ public class HomePage {
         return new KeyPressesPage(driver);
     }
 
+    public AlertsPage clickJavaScriptAlerts() {
+        clickLink("JavaScript Alerts");
+        return new AlertsPage(driver);
+    }
+
+    private void clickLink(String linkText) {
+        driver.findElement(By.linkText(linkText)).click();
+    }
+
     public ForgotPasswordPage clickForgotPassword() {
         clickLink("Forgot Password");
         return new ForgotPasswordPage(driver);
@@ -41,9 +48,5 @@ public class HomePage {
     public HorizontalSliderPage clickHorizontalSlider() {
         clickLink("Horizontal Slider");
         return new HorizontalSliderPage(driver);
-    }
-
-    private void clickLink(String linkText) {
-        driver.findElement(By.linkText(linkText)).click();
     }
 }
