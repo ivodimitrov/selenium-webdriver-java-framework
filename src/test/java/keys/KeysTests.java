@@ -17,7 +17,6 @@ public class KeysTests extends BaseTests {
 
     @Test
     public void testPi() {
-        setUp();
         var keyPage = homePage.clickKeyPresses();
         keyPage.enterPi();
         assertEquals(keyPage.getResult(), "You entered: P");
