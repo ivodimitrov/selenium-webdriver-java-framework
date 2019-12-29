@@ -2,10 +2,13 @@ package base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pages.HomePage;
+
 
 public class BaseTests {
 
     private WebDriver driver;
+    protected HomePage homePage;
 
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
@@ -21,7 +24,8 @@ public class BaseTests {
         //3 - Specific width (iPhoneX)
         //driver.manage().window().setSize(new Dimension(375, 812));
 
-        System.out.println(driver.getTitle());
+        homePage = new HomePage(driver);
+
         driver.quit();
     }
 
