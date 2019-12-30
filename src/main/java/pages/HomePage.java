@@ -36,6 +36,36 @@ public class HomePage {
         return new AlertsPage(driver);
     }
 
+    public FileUploadPage clickFileUpload() {
+        clickLink("File Upload");
+        return new FileUploadPage(driver);
+    }
+
+    public WysiwygEditorPage clickWysiwygEditor() {
+        clickLink("WYSIWYG Editor");
+        return new WysiwygEditorPage(driver);
+    }
+
+    public LargeAndDeepDomPage clickLargeAndDeepDom() {
+        clickLink("Large & Deep DOM");
+        return new LargeAndDeepDomPage(driver);
+    }
+
+    public InfiniteScrollPage clickInfiniteScroll() {
+        clickLink("Infinite Scroll");
+        return new InfiniteScrollPage(driver);
+    }
+
+    public DynamicLoadingPage clickDynamicLoading() {
+        clickLink("Dynamic Loading");
+        return new DynamicLoadingPage(driver);
+    }
+
+    public MultipleWindowsPage clickMultipleWindows() {
+        clickLink("Multiple Windows");
+        return new MultipleWindowsPage(driver);
+    }
+
     private void clickLink(String linkText) {
         driver.findElement(By.linkText(linkText)).click();
     }
@@ -48,5 +78,15 @@ public class HomePage {
     public HorizontalSliderPage clickHorizontalSlider() {
         clickLink("Horizontal Slider");
         return new HorizontalSliderPage(driver);
+    }
+
+    public ContextMenuPage clickContextMenu() {
+        clickLink("Context Menu");
+        return new ContextMenuPage(driver);
+    }
+
+    public FramesPage clickFramesPage() {
+        clickLink("Frames");
+        return new FramesPage(driver);
     }
 }

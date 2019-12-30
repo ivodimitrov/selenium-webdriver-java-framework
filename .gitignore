@@ -1,3 +1,4 @@
 /.idea/
 /target/
 /resources/
+/src/main/resources/*.png
