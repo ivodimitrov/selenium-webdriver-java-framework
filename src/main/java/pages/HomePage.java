@@ -46,11 +46,6 @@ public class HomePage {
         return new WysiwygEditorPage(driver);
     }
 
-    public DynamicLoadingPage clickDynamicLoading() {
-        clickLink("Dynamic Loading");
-        return new DynamicLoadingPage(driver);
-    }
-
     public LargeAndDeepDomPage clickLargeAndDeepDom() {
         clickLink("Large & Deep DOM");
         return new LargeAndDeepDomPage(driver);
@@ -59,6 +54,11 @@ public class HomePage {
     public InfiniteScrollPage clickInfiniteScroll() {
         clickLink("Infinite Scroll");
         return new InfiniteScrollPage(driver);
+    }
+
+    public DynamicLoadingPage clickDynamicLoading() {
+        clickLink("Dynamic Loading");
+        return new DynamicLoadingPage(driver);
     }
 
     public MultipleWindowsPage clickMultipleWindows() {
