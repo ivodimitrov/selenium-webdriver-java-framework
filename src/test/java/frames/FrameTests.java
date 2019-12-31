@@ -7,7 +7,7 @@ import static org.testng.Assert.assertEquals;
 
 public class FrameTests extends BaseTests {
 
-    @Test
+    @Test(priority = 2)
     public void testWysiwyg() {
         var editorPage = homePage.clickWysiwygEditor();
         editorPage.clearTextArea();
@@ -22,7 +22,7 @@ public class FrameTests extends BaseTests {
         assertEquals(editorPage.getTextFromEditor(), text1 + text2, "Text from editor is incorrect");
     }
 
-    @Test
+    @Test(priority = 1)
     public void testFrameText() {
         var nestedFramesPage = homePage.clickFramesPage().clickNestedFrames();
         assertEquals(nestedFramesPage.getLeftFrameText(), "LEFT", "Left frame text incorrect");
