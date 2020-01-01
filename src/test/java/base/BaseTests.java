@@ -58,7 +58,7 @@ public class BaseTests {
             var camera = (TakesScreenshot) driver;
             File screenshot = camera.getScreenshotAs(OutputType.FILE);
             try {
-                Files.move(screenshot, new File("/Users/iv_di/IdeaProjects/selenium-webdriver-java-framework/src/main/resources/screenshots"
+                Files.move(screenshot, new File("/Users/iv_di/IdeaProjects/selenium-webdriver-java-framework/src/main/resources/screenshots/"
                         + result.getName() + ".png"));
             } catch (IOException e) {
                 e.printStackTrace();
