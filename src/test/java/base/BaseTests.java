@@ -14,6 +14,7 @@ import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
 import utils.CookieManager;
 import utils.EventReporter;
+import utils.HighlightElement;
 import utils.WindowManager;
 
 import java.io.File;
@@ -66,10 +67,6 @@ public class BaseTests {
         }
     }
 
-    public WindowManager getWindowManager() {
-        return new WindowManager(driver);
-    }
-
     private ChromeOptions getChromeOptions() {
         ChromeOptions options = new ChromeOptions();
         // Disabling Chrome notification bar at the top of the browser saying "Chrome is being controlled by automated test software"
@@ -78,7 +75,15 @@ public class BaseTests {
         return options;
     }
 
+    public WindowManager getWindowManager() {
+        return new WindowManager(driver);
+    }
+
     public CookieManager getCookieManager() {
         return new CookieManager(driver);
+    }
+
+    public HighlightElement getHighlightElement() {
+        return new HighlightElement(driver);
     }
 }
